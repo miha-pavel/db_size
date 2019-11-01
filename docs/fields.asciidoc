@@ -9,7 +9,7 @@ This file is generated! See _meta/fields.yml and scripts/generate_fields_docs.py
 [partintro]
 
 --
-This document describes the fields that are exported by Metricbeat. They are
+This document describes the fields that are exported by Db_Size. They are
 grouped in the following categories:
 
 * <<exported-fields-beat-common>>
@@ -178,14 +178,14 @@ alias to: cloud.region
 [[exported-fields-db_size]]
 == db_size fields
 
-db_size module
+db_size module for getting postgres db table size
 
 
 
 [float]
 === db_size
 
-
+db_size for getting postgres db table size
 
 
 [float]
