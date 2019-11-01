@@ -1,0 +1,9 @@
+# Module: db_size
+# Docs: https://www.elastic.co/guide/en/beats/db_size/master/db_size-module-db_size.html
+
+- module: db_size
+  metricsets: ["db_table_size"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+

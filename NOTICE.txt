@@ -1,0 +1,5 @@
+db_size
+Copyright {year} Pavlo Mykhalichenko
+
+This product includes software developed by The Apache Software
+Foundation (http://www.apache.org/).

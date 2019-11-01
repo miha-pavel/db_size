@@ -1,0 +1,39 @@
+////
+This file is generated! See scripts/mage/docs_collector.go
+////
+
+[[db_size-module-db_size]]
+== db_size module
+
+beta[]
+
+This is the db_size module.
+
+
+
+[float]
+=== Example configuration
+
+The db_size module supports the standard configuration options that are described
+in <<configuration-db_size>>. Here is an example configuration:
+
+[source,yaml]
+----
+db_size.modules:
+- module: db_size
+  metricsets: ["db_table_size"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+
+----
+
+[float]
+=== Metricsets
+
+The following metricsets are available:
+
+* <<db_size-metricset-db_size-db_table_size,db_table_size>>
+
+include::db_size/db_table_size.asciidoc[]
+

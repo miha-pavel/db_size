@@ -1,0 +1,10 @@
+- key: db_size
+  title: "db_size"
+  release: beta
+  description: >
+    db_size module
+  fields:
+    - name: db_size
+      type: group
+      description: >
+      fields:

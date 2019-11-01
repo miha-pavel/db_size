@@ -1,0 +1,10 @@
+- name: db_table_size
+  type: group
+  release: beta
+  description: >
+    db_table_size
+  fields:
+    - name: example
+      type: keyword
+      description: >
+        Example field

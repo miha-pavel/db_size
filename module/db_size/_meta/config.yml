@@ -1,0 +1,6 @@
+- module: db_size
+  metricsets: ["db_table_size"]
+  enabled: false
+  period: 10s
+  hosts: ["localhost"]
+

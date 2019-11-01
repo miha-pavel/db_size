@@ -1,0 +1,14 @@
+////
+This file is generated! See scripts/mage/docs_collector.go
+////
+
+[options="header"]
+|===
+|Modules   |Dashboards   |Metricsets   
+|<<db_size-module-db_size,db_size>>  beta[]   |image:./images/icon-no.png[No prebuilt dashboards]    |  
+.1+| .1+|  |<<db_size-metricset-db_size-db_table_size,db_table_size>> beta[]  
+|===
+
+--
+
+include::modules/db_size.asciidoc[]
