@@ -195,13 +195,83 @@ db_table_size
 
 
 
-*`db_size.db_table_size.example`*::
+*`db_size.db_table_size.oid`*::
 +
 --
-Example field
+The number of table
 
 
-type: keyword
+type: integer
+
+--
+
+*`db_size.db_table_size.tableSchema`*::
++
+--
+Name table schema
+
+
+type: text
+
+--
+
+*`db_size.db_table_size.tableName`*::
++
+--
+The table name
+
+
+type: text
+
+--
+
+*`db_size.db_table_size.rowEstimate`*::
++
+--
+rowEstimate
+
+
+type: integer
+
+--
+
+*`db_size.db_table_size.totalBytes`*::
++
+--
+totalBytes
+
+
+type: integer
+
+--
+
+*`db_size.db_table_size.indexBytes`*::
++
+--
+indexBytes
+
+
+type: integer
+
+--
+
+*`db_size.db_table_size.toastBytes`*::
++
+--
+toastBytes
+
+
+type: integer
+
+--
+
+*`db_size.db_table_size.tableBytes`*::
++
+--
+tableBytes
+
+
+type: integer
 
 --
 

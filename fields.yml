@@ -3410,11 +3410,11 @@
   title: "db_size"
   release: beta
   description: >
-    db_size module
+    db_size module for getting postgres db table size
   fields:
     - name: db_size
       type: group
-      description: >
+      description: db_size for getting postgres db table size
       fields:
         - name: db_table_size
           type: group
@@ -3422,7 +3422,42 @@
           description: >
             db_table_size
           fields:
-            - name: example
-              type: keyword
+            - name: oid
+              type: integer
               description: >
-                Example field
+                The number of table
+        
+            - name: tableSchema
+              type: text
+              description: >
+                Name table schema
+            
+            - name: tableName
+              type: text
+              description: >
+                The table name
+        
+            - name: rowEstimate
+              type: integer
+              description: >
+                rowEstimate
+            
+            - name: totalBytes
+              type: integer
+              description: >
+                totalBytes
+        
+            - name: indexBytes
+              type: integer
+              description: >
+                indexBytes
+            
+            - name: toastBytes
+              type: integer
+              description: >
+                toastBytes
+        
+            - name: tableBytes
+              type: integer
+              description: >
+                tableBytes

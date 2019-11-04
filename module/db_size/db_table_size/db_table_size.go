@@ -80,21 +80,9 @@ func New(base mb.BaseMetricSet) (mb.MetricSet, error) {
 // format. It publishes the event which is then forwarded to the output. In case
 // of an error set the Error field of mb.Event or simply call report.Error().
 func (m *MetricSet) Fetch(report mb.ReporterV2) error {
-	report.Event(mb.Event{
-		MetricSetFields: common.MapStr{
-			"oid":         m.oid,
-			"tableSchema": m.tableSchema,
-			"tableName":   m.tableName,
-			"rowEstimate": m.rowEstimate,
-			"totalBytes":  m.totalBytes,
-			"indexBytes":  m.indexBytes,
-			"toastBytes":  m.toastBytes,
-			"tableBytes":  m.tableBytes,
-		},
-	})
 
-	const connectionStr string = "user=postgres dbname=california sslmode=disable" //change connectionStr!!!!!!!!!
-	db, err := sql.Open("postgres", connectionStr)                                 //string
+	const connectionStr string = "user=postgres password=miha5580 dbname=postgres sslmode=disable" //change connectionStr!!!!!!!!!
+	db, err := sql.Open("postgres", connectionStr)                                                 //string
 	if err != nil {
 		panic(err)
 	}
@@ -124,10 +112,8 @@ func (m *MetricSet) Fetch(report mb.ReporterV2) error {
 	}
 
 	defer rows.Close()
-	MetricSets := []MetricSet{}
 
 	for rows.Next() {
-		m := MetricSet{}
 		rows.Scan(
 			&m.oid,
 			&m.tableSchema,
@@ -142,7 +128,19 @@ func (m *MetricSet) Fetch(report mb.ReporterV2) error {
 			fmt.Println(err)
 			continue
 		}
-		MetricSets = append(MetricSets, m)
+
+		report.Event(mb.Event{
+			MetricSetFields: common.MapStr{
+				"oid":         m.oid,
+				"tableSchema": m.tableSchema,
+				"tableName":   m.tableName,
+				"rowEstimate": m.rowEstimate,
+				"totalBytes":  m.totalBytes,
+				"indexBytes":  m.indexBytes,
+				"toastBytes":  m.toastBytes,
+				"tableBytes":  m.tableBytes,
+			},
+		})
 	}
 	return nil
 }
