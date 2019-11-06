@@ -1,0 +1,1 @@
+This is the `db_sizes` metricset of the PostgreSQL module.

@@ -1,0 +1,18 @@
+- name: db_sizes
+  type: group
+  release: beta
+  description: >
+    db_sizes
+  fields:
+    - name: database
+      type: text
+      description: >
+        Database Name
+    - name: owner
+      type: text
+      description: >
+        Database Owner
+    - name: size
+      type: integer
+      description: >
+        Database Size in bytes

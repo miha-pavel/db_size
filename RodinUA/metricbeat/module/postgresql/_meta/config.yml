@@ -1,0 +1,11 @@
+- module: postgresql
+  #metricsets:
+  #  - database
+  #  - bgwriter
+  #  - activity
+  #  - db_sizes
+  #  - table_sizes
+  period: 10s
+  hosts: ["postgres://localhost:5432"]
+  #username: user
+  #password: pass
